@@ -40,7 +40,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Got an error with poste_path being null which took a while to resolve.
+Got an error with poste_path being null which took a while to resolve. This is just a basic verison. Still working on added functionality.
 
 ## License
 
