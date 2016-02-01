@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var movies:NSDictionary!
+    var movie:NSDictionary!
 
     @IBOutlet weak var posterimageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -20,6 +20,11 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        titleLabel.text = movie["title"] as! String
+        overviewLabel.text = movie["overview"] as! String
+
+        
     }
 
     override func didReceiveMemoryWarning() {
