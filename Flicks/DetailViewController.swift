@@ -23,7 +23,14 @@ class DetailViewController: UIViewController {
         
         titleLabel.text = movie["title"] as! String
         overviewLabel.text = movie["overview"] as! String
-
+        
+        if let imageChangingURL = movie["poster_path"] as? String{
+            let imageURL = NSURL(string: "http://image.tmdb.org/t/p/w500" + imageChangingURL)
+            posterimageView.setImageWithURL(imageURL!)
+        }
+        else {
+            posterimageView.image = nil
+        }
         
     }
 
