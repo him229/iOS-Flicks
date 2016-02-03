@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
         
         if let imageChangingURL = movie["poster_path"] as? String{
             let imageURL = NSURL(string: "http://image.tmdb.org/t/p/w500" + imageChangingURL)
+            
             posterimageView.setImageWithURL(imageURL!)
         }
         else {
