@@ -94,7 +94,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XoR-xr-zgE">
-                                                <rect key="frame" x="10" y="42" width="304" height="204"/>
+                                                <rect key="frame" x="8" y="42" width="304" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -110,8 +110,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="4LL-W9-1KM"/>
                     <connections>
+                        <outlet property="infoView" destination="BQ3-0j-LeI" id="jIM-WD-yVP"/>
                         <outlet property="overviewLabel" destination="XoR-xr-zgE" id="lk1-8i-qCt"/>
                         <outlet property="posterimageView" destination="vVo-Nx-k7e" id="EiV-8o-dqn"/>
+                        <outlet property="scrollView" destination="0wE-8r-KqC" id="f6i-w1-yeW"/>
                         <outlet property="titleLabel" destination="bEK-iJ-22P" id="fZU-3n-u4O"/>
                     </connections>
                 </viewController>
