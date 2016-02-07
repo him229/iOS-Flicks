@@ -21,8 +21,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 0.5)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 1.0)
+        self.tabBarController?.tabBar.barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 1.0)]
+        
         tableView.dataSource = self
         tableView.delegate = self
+
         
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "refreshControlAction:", forControlEvents: UIControlEvents.ValueChanged)
@@ -133,7 +140,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             let backgroundView = UIView()
             backgroundView.backgroundColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 0.5)
             cell.selectedBackgroundView = backgroundView
-            
+            cell.backgroundColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 0.5)
         }
         else {
             cell.posterView.image = nil
