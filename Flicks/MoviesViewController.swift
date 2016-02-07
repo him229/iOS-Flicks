@@ -21,7 +21,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 0.5)
+        self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
         self.navigationController?.navigationBar.tintColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 1.0)
         self.tabBarController?.tabBar.barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
@@ -134,13 +134,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         if let imageChangingURL = movie["poster_path"] as? String{
             let imageURL = NSURL(string: "http://image.tmdb.org/t/p/w500" + imageChangingURL)
             cell.titleLabel.text = title
+            cell.titleLabel.textColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 1.0)
             cell.overviewLabel.text = overview
+            cell.overviewLabel.textColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 1.0)
             cell.posterView.setImageWithURL(imageURL!)
             
             let backgroundView = UIView()
-            backgroundView.backgroundColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 0.5)
+            backgroundView.backgroundColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 0.2)
             cell.selectedBackgroundView = backgroundView
-            cell.backgroundColor = UIColor(red: 245/255.0, green: 173/255.0, blue: 40/255.0, alpha: 0.5)
+            cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.9)
         }
         else {
             cell.posterView.image = nil
